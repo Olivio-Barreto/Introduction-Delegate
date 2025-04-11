@@ -14,16 +14,13 @@ internal class Program
             new Product("HD case", 80.90)
         };
 
-        list.ForEach(UpdatePrice);
+        Action<Product> action = p => { p.Price += p.Price * 0.1; };
+
+        list.ForEach(action);
 
         foreach (var product in list)
         {
             Console.WriteLine(product);
         }
-    }
-
-    static void UpdatePrice(Product p)
-    {
-        p.Price += p.Price * 0.1;
     }
 }
