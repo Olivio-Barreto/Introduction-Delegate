@@ -1,4 +1,4 @@
-namespace Action.Entities;
+namespace ActionTraining.Entities;
 
 public class Product(string name, double price)
 {
