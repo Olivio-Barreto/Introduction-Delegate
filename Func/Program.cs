@@ -11,19 +11,11 @@ internal class Program
             new Product("Macbook", 5600.00)
         };
 
-        Func<Product, string> deleFunc = NameUpper;
-
-
-        List<string> result = list.Select(deleFunc).ToList();
+        List<string> result = list.Select(p => p.Name.ToUpper()).ToList();
 
         foreach (string item in result)
         {
             Console.WriteLine(item);
         }
-    }
-
-    static string NameUpper(Product p)
-    {
-        return p.Name.ToUpper();
     }
 }
