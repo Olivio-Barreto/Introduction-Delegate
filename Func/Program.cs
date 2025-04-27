@@ -11,7 +11,10 @@ internal class Program
             new Product("Macbook", 5600.00)
         };
 
-        List<string> result = list.Select(NameUpper).ToList();
+        Func<Product, string> deleFunc = NameUpper;
+
+
+        List<string> result = list.Select(deleFunc).ToList();
 
         foreach (string item in result)
         {
